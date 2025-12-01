@@ -1,0 +1,61 @@
+Provjera statusa:
+git status
+
+Dodavanje svih promjena u staging:
+git add .
+
+Dodavanje pojedine datoteke:
+git add Main.java ili možda imate Armstrong.java ili nešto treće.
+
+Spremanje promjena (commit):
+git commit -m "Opis promjene"
+
+Slanje promjena na GitHub (prvi put na grani):
+git push -u origin main
+
+Slanje promjena kasnije (na istoj grani):
+git push
+
+*Kreiranje nove grane*
+
+Kreiranje nove grane i prebacivanje na nju:
+git checkout -b new-feature
+
+Prebacivanje nazad na main granu:
+git checkout main
+
+Prikaz svih lokalnih grana:
+git branch
+
+Slanje nove grane na GitHub:
+git push -u origin new-feature
+
+*Tipičan tijek rada (sažetak)*
+
+Prvi setup:
+
+kloniranje repozitorija (git clone …)
+
+otvaranje u IntelliJ
+
+Rad na main grani:
+
+mijenjanje koda
+
+git status
+
+git add .
+
+git commit -m "poruka"
+
+git push
+
+Rad na new-feature grani:
+
+git checkout -b new-feature (ako je prvi put jer -b stvara granu), inače
+git checkout new-feature
+
+mijenjanje koda:
+git add .
+git commit -m "poruka"
+git push -u origin new-feature
