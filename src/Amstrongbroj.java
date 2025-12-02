@@ -1,7 +1,10 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
+public class Amstrongbroj {
+
     public static void main(String[] args) {
+        Amstrong(args);
+    }
+
+    public static void Amstrong(String[] args) {
 
         for (int i = 1; i <= 9999; i++) {
             if (isArmstrong(i)) {
@@ -10,7 +13,8 @@ public class Main {
         }
     }
 
-    private static boolean isArmstrong(int number) {
+
+    public static boolean isArmstrong(int number) {
         int original = number;
         int sum = 0;
 
@@ -19,7 +23,6 @@ public class Main {
             sum += digit * digit * digit;
             number /= 10;
         }
-
         return sum == original;
     }
 }
