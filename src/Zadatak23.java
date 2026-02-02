@@ -5,29 +5,29 @@ public class Zadatak23 {
 
         Scanner sc = new Scanner(System.in);
 
-        // Učitavanje iznosa
-        double iznos = sc.nextDouble();
+        // Unos iznosa, npr. 12.37
+        double unos = sc.nextDouble();
 
-        // Vrijednosti novčanica i kovanica
-        double[] values = {
-                500, 200, 100, 50, 20, 10, 5,
-                2, 1, 0.5, 0.2, 0.1, 0.05, 0.02, 0.01
+        // sve u cente
+        int iznos = (int) Math.round(unos * 100);
+
+        int[] values = {
+                50000, 20000, 10000, 5000, 2000, 1000,
+                500, 200, 100, 50, 20, 10, 5, 2, 1
         };
 
         System.out.println("Morate uzvratiti:");
 
         for (int i = 0; i < values.length; i++) {
-            int broj = (int) (iznos / values[i]);
+            int broj = iznos / values[i];
 
             if (broj > 0) {
-                System.out.println(broj + "*" + values[i]);
-                iznos = iznos - broj * values[i];
-
-                // korekcija zbog double preciznosti
-                iznos = Math.round(iznos * 100) / 100.0;
+                System.out.println(broj + " x " + (values[i] / 100.0));
+                iznos = iznos % values[i];
             }
         }
 
         sc.close();
     }
 }
+
